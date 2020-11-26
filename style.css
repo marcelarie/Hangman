@@ -1,3 +1,8 @@
+.visibilityHidden {
+    visibility: hidden;
+}
+
+
 #secondMainPage {
     display: flex;
     flex-direction: column;
