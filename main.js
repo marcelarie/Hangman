@@ -1,4 +1,4 @@
-//document.getElementById("secondMainPage").classList.add("hide-me");
+document.getElementById("secondMainPage").classList.add("hide-me");
 document.getElementById("finalPage").classList.add("hide-me");
 
 function prevent(event) {
