@@ -1,6 +1,6 @@
-const hangManLetters = document.querySelectorAll('.hangManLetters');
-hangManLetters.addEventListener('click', hideLetter);
-
-function hideLetter(e) {
-
-}
+const hangManLetters = document.querySelectorAll('.letterButton');
+hangManLetters.forEach(e => {
+    e.addEventListener('click', () => {
+        e.classList.add('visibilityHidden')
+    })
+})
