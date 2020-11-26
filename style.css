@@ -2,7 +2,6 @@
     visibility: hidden;
 }
 
-
 #secondMainPage {
     display: flex;
     flex-direction: column;
@@ -74,4 +73,8 @@ min-height: 5em;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+}
+
+.hide-me {
+    display: none !important;
 }
