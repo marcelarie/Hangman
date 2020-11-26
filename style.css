@@ -1,0 +1,7 @@
+/* Styles for welcome Page */
+#welcome{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
