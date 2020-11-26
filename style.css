@@ -63,8 +63,10 @@ margin: 0.5em;
 min-height: 5em;
 }
 
-
-
-
-
-
+/* Styles for welcome Page */
+#welcome{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
