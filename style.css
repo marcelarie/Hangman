@@ -132,7 +132,7 @@ height:20em;
     background-color: black;
     position: relative;
     width: 100%;
-    border: 0.5em solid var(--mainBorderColor);
+    border: 0.35em solid var(--mainBorderColor);
     border-radius: 0.5em;
 }
 
@@ -220,10 +220,11 @@ body {
 }
 
 .letterButton {
-    border: 0.5em solid var(--mainBorderColor);
+    border: 0.35em solid var(--mainBorderColor);
     border-radius: 1em;
     min-width: 3em;
     min-height: 1.2em;
     background-color: var(--innerButton);
+    margin: 0.1em;
 }
 
