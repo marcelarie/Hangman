@@ -47,3 +47,4 @@ function scoreRank(win) {
 }
 
 document.getElementById("hangManLetters").addEventListener("click", incrementLetterCount);
+document.getElementById
