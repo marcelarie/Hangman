@@ -9,6 +9,10 @@ body{
     justify-content: center;
 }
 
+#general-wrapper{
+    width: 100%;
+}
+
 .visibilityHidden {
     visibility: hidden;
 }
@@ -91,6 +95,21 @@ min-height: 5em;
 
 .hide-me {
     display: none !important;
+}
+
+/* Styles for finalScreen */
+#finalScreen{
+    display:flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+#finalPage{
+    width: 70%;
+}
+
+#scores{
+    width: 30%;
 }
 
 /*canvas draw*/
