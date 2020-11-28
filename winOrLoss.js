@@ -1,8 +1,6 @@
 var level = 1;
 var letterCount = 0;
-var reference = 'adrhathatrhartrt';
-var userWord = '';
-
+var currentWord = '';
 
 function incrementLetterCount(event) {
     if (event.target.classList.contains('visibilityHidden')) {
@@ -14,9 +12,11 @@ function incrementLetterCount(event) {
 }
 
 function winOrLoss() {
-    if (reference === userWord) {
+    if (currentWord === levelWord) {
         var win = true;
-        level += 1;
+        if (level<3){
+            level += 1;
+        }
         scoreRank(win)
     }
     else if (letterCount === 10) {
