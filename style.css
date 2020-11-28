@@ -31,12 +31,14 @@ body{
 #secondMainPage {
     display: flex;
     flex-direction: column;
+    contain:content;
 }
 
 #hangManUp{
-    flex-basis: 65%; display: flex;
+    flex-basis: 55%; display: flex;
     flex-direction: row;
     border: solid 1px black;
+    max-height: 80%;
 }
 
 #hangManCanvas{
@@ -44,6 +46,7 @@ body{
     justify-content: center;
     align-content: center;
     min-width: 20em;
+    max-height: 80%;
     border: solid 1px black;
 }
 
@@ -53,6 +56,7 @@ body{
     display:flex;
     flex-direction: column;
     border: solid 1px black;
+    max-height: 20em;
 }
 
 #hangManGuessTitle {
@@ -73,24 +77,18 @@ body{
 }
 
 #hangManLetters{
-flex-basis:35%;
+flex-basis:45%;
 display: flex;
 flex-direction: row;
 justify-content: space-evenly;
 flex-wrap: wrap;
 align-content: center;
-padding: 2em;
+padding: 0.4em;
 border: solid 1px black;
+height:20em;
 }
 
-.letterButton{
-color: white;
-background-color: black;
-border-radius:5px;
-min-width: 5em;
-margin: 0.5em;
-min-height: 5em;
-}
+
 
 /* Styles for welcome Page */
 .column{
@@ -196,6 +194,7 @@ body {
 .letterButton {
     border: 0.5em solid var(--mainBorderColor);
     border-radius: 1em;
-    min-width: 5em;
-    min-height: 2em;
+    min-width: 3em;
+    min-height: 1.2em;
+    background-color: var(--innerButton);
 }
