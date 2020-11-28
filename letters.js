@@ -24,18 +24,18 @@ var wordsLevel3 = ["abruptly", "absurd", "abyss", "affix", "askew", "avenue", "a
 const hangManGuessLetters = document.getElementById('hangManGuessLetters')
 
 let levelWord = '';
-let word1 = wordsLevel1[Math.floor(Math.random() * wordsLevel1.length)];
-let word2 = wordsLevel2[Math.floor(Math.random() * wordsLevel2.length)];
-let word3 = wordsLevel3[Math.floor(Math.random() * wordsLevel3.length)];
 
 function showTheWord() {
     if (level === 1) {
+        let word1 = wordsLevel1[Math.floor(Math.random() * wordsLevel1.length)];
         return levelWord = word1.toUpperCase();
         //hangManGuessLetters.textContent = word1;
     } else if (level === 2) {
+        let word2 = wordsLevel2[Math.floor(Math.random() * wordsLevel2.length)];
         return levelWord = word2.toUpperCase();
         //hangManGuessLetters.textContent = word2;
     } else {
+        let word3 = wordsLevel3[Math.floor(Math.random() * wordsLevel3.length)];
         return levelWord = word3.toUpperCase();
         //hangManGuessLetters.textContent = word3;
     };
@@ -49,6 +49,8 @@ function hiddenCharacters() {
 }
 
 function runTheGame() {
+    hidden = '';
+
     showTheWord();
     hiddenCharacters();
 }
