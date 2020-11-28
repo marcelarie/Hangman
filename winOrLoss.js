@@ -25,8 +25,7 @@ function winOrLoss() {
 
 function scoreRank() {
     document.getElementById("secondMainPage").classList.add("hide-me");
-    document.getElementById("scores").classList.remove("hide-me");
-    document.getElementById("finalPage").classList.remove("hide-me");
+    document.getElementById("finalScreen").classList.remove("hide-me");
     end=Date.now();
     score=(end-start)/1000;
 
