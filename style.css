@@ -46,8 +46,10 @@ body{
     justify-content: center;
     align-content: center;
     min-width: 20em;
-    max-height: 80%;
+    max-height: 100%;
     border: solid 1px black;
+    display: inline-block;
+    line-height: 0;
 }
 
 #hangManGuess{
@@ -124,7 +126,10 @@ height:20em;
 
 /*canvas draw*/
 #hangManCanvas {
-    padding: 2em;
+    padding: 1em;
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
 
 /*STYLE MAIN PAGE */
@@ -138,9 +143,16 @@ height:20em;
     justify-content: center;
     background-color: var(--consoleBrightSurface);
     font-family: 'Righteous', cursive;
-    
+    position: relative;
 }
 
+#welcome > img{
+    max-width: 5em;
+    position: absolute;
+    top: 3em;
+    left: 2em;
+
+}
 body {
     /*border: 0.5em solid var(--mainBorderColor);*/
     margin: 2em 0;
