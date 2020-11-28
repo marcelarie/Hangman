@@ -2,6 +2,7 @@ var level = 1;
 var letterCount = 0;
 var currentWord = '';
 
+
 function incrementLetterCount(event) {
     if (event.target.classList.contains('visibilityHidden')) {
         letterCount += 1;
@@ -12,6 +13,7 @@ function incrementLetterCount(event) {
 }
 
 function winOrLoss() {
+    currentWord = hangManGuessLetters.textContent;
     if (currentWord === levelWord) {
         var win = true;
         if (level<3){
@@ -26,23 +28,23 @@ function winOrLoss() {
 }
 
 function scoreRank(win) {
-    if(win){
+    if (win) {
         document.getElementById("lostMessage").classList.add("hide-me");
         document.getElementById("winMessage").classList.remove("hide-me");
     }
-    else{
+    else {
         document.getElementById("winMessage").classList.add("hide-me");
         document.getElementById("lostMessage").classList.remove("hide-me");
-        
+
     }
     document.getElementById("secondMainPage").classList.add("hide-me");
     document.getElementById("finalScreen").classList.remove("hide-me");
-    end=Date.now();
-    score=(end-start)/1000;
+    end = Date.now();
+    score = (end - start) / 1000;
 
-    var parent=document.getElementById("scores");
-    var newUser=document.createElement("span");
-    newUser.innerHTML=name+" : "+score;
+    var parent = document.getElementById("scores");
+    var newUser = document.createElement("span");
+    newUser.innerHTML = name + " : " + score;
     parent.appendChild(newUser);
 }
 

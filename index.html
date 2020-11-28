@@ -4,7 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
     <title>Hangman</title>
 </head>
 
@@ -12,18 +16,25 @@
     <div id="general-wrapper">
 
         <section id="welcome" class="column">
-            <h1>Chose a user name</h1>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Game_and_watch_logo.svg/1200px-Game_and_watch_logo.svg.png" alt="mr game & watch logo">
+            <h2>HANGMAN GAME</h2>
+            <div class="screen">
+            <h1>CHOSE YOUR USERNAME</h1>
             <form action="" class="column">
                 <label for="userName">User name:</label><br>
                 <input type="text" id="userName" placeholder="Perico Palotes" autofocus><br>
-                <button id="startButton">Start</button>
+            </div>
+                <div>
+                <button id="startButton"></button>
+                <p class= "consoleButtons">START</p>
+                </div>
             </form>
         </section>
 
         <section id="secondMainPage" class="mainPage">
             <div id="hangManUp">
                 <div id="hangManCanvas">
-                    <canvas id="canvasBox"></canvas>
+                    <canvas id="canvasBox" height="30em"; width="20em"></canvas>
                 </div>
                 <div id="hangManGuess">
                     <div id="hangManGuessTitle"> Guess the Word</div>
@@ -61,16 +72,30 @@
         </section>
 
     <section id="finalScreen">
-
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Game_and_watch_logo.svg/1200px-Game_and_watch_logo.svg.png" alt="mr game & watch logo">
+            <h2>HANGMAN GAME</h2>
+        <div id="endScreen" class= "screen">
         <div id="finalPage" class="column">
-            <h1 id="winMessage">You won! 🎉</h1>
-            <h1 id="lostMessage">You lost! 🥺</h1>
+            <div id="winMessage">
+            <h1 >You won! </h1>
+            <br>
+                <img src="./img/YOU WIN GIF.png" alt="">
+            </div>
+            <div id="lostMessage">
+            <h1 >You lost! </h1>
+            <br>
+            <img src="https://preview.pixlr.com/images/800wm/100/1/1001519923.jpg" alt="">
+            </div>
             <p id="timeMessage">You won in <span id="secondsMessage">00</span> seconds.</p>
-            <button id="playAgainButton">Play again</button>
         </div>
 
         <div id="scores" class="column">
             <h3 class="">User Scores</h3>
+        </div>
+        </div>
+        <div class= buttonGroup>
+        <button id="playAgainButton"></button>
+        <p class= "consoleButtons">PLAY AGAIN</p>
         </div>
     </section>
 

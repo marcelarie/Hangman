@@ -4,6 +4,17 @@
     margin: 0;
 }
 
+:root {
+    --mainBorderColor: #a0171f;
+    --borderBright: #f57480;
+    --consoleSurface: #dac7a7;
+    --consoleBrightSurface: #f1e3cc;
+    --innerButton: #b6a6a9;
+    --borderButton: #761424;
+    --brightBorderButton: #b24a4a;
+    --innerScreen: #c2d2c8;
+}
+
 body{
     display:flex;
     justify-content: center;
@@ -20,20 +31,27 @@ body{
 #secondMainPage {
     display: flex;
     flex-direction: column;
+    contain:content;
 }
 
 #hangManUp{
-    flex-basis: 65%; display: flex;
+    flex-basis: 55%; display: flex;
     flex-direction: row;
     border: solid 1px black;
+    max-height: 80%;
 }
 
 #hangManCanvas{
-    flex-basis: 30%;
+    flex-basis: 40%;
     justify-content: center;
     align-content: center;
-    min-width: 20em;
+    width: 100%;
+    max-height: 100%;
     border: solid 1px black;
+    margin: 2em;
+    display: inline-block;
+    line-height: 0;
+    position: relative;
 }
 
 #hangManGuess{
@@ -42,6 +60,7 @@ body{
     display:flex;
     flex-direction: column;
     border: solid 1px black;
+    max-height: 20em;
 }
 
 #hangManGuessTitle {
@@ -62,23 +81,15 @@ body{
 }
 
 #hangManLetters{
-flex-basis:35%;
+flex-basis:45%;
 display: flex;
 flex-direction: row;
 justify-content: space-evenly;
 flex-wrap: wrap;
 align-content: center;
-padding: 2em;
+padding: 0.4em;
 border: solid 1px black;
-}
-
-.letterButton{
-color: white;
-background-color: black;
-border-radius:5px;
-min-width: 5em;
-margin: 0.5em;
-min-height: 5em;
+height:20em;
 }
 
 /* Styles for welcome Page */
@@ -91,10 +102,7 @@ min-height: 5em;
 #welcome h1{
     padding-top: 30px;
     padding-bottom: 30px;
-}
-
-.hide-me {
-    display: none !important;
+    font-family: 'Press Start 2P', cursive;
 }
 
 /* Styles for finalScreen */
@@ -114,5 +122,171 @@ min-height: 5em;
 
 /*canvas draw*/
 #hangManCanvas {
-    padding: 2em;
+    padding: 0.2em;
+    background-color: black;
+    position: relative;
+    width: 100%;
+    border: 0.35em solid var(--mainBorderColor);
+    border-radius: 0.5em;
+}
+
+#canvasBox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: var(--innerScreen);
+    border-radius: 0.3em;
+    justify-content: center;
+    text-align: center;
+    padding-left: 1em;
+}
+
+
+/*STYLE MAIN PAGE */
+#welcome{
+    border: 0.5em solid var(--mainBorderColor);
+    border-image-source: radial-gradient(to left, #743ad5, #d53a9d);
+    width: 70%;
+    height: 65vh;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    background-color: var(--consoleBrightSurface);
+    font-family: 'Righteous', cursive;
+    position: relative;
+}
+
+#welcome > img{
+    max-width: 5em;
+    position: absolute;
+    top: 3em;
+    left: 2em;
+
+}
+body {
+    /*border: 0.5em solid var(--mainBorderColor);*/
+    margin: 2em 0;
+}
+
+.screen {
+    margin: 1em;
+    border: 0.5em solid var(--mainBorderColor);
+    padding: 1em;
+    background-color: var(--innerScreen);
+    border-radius: 1em;
+    font-family: 'Press Start 2P', cursive;
+    max-width: 60%;
+    text-align: center;
+    justify-content: center;
+    height: 70%;
+}
+
+#startButton {
+    border: 0.5em solid var(--mainBorderColor);
+    border-radius: 1em;
+    min-width: 5em;
+    min-height: 2em;
+}
+
+.column > input {
+    border-color: black;
+    border-radius: 0.5em;
+    background-color: var(--innerScreen);
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    min-height: 2em;
+}
+
+.consoleButtons {
+    font-weight: bold;
+}
+
+#secondMainPage {
+    border: 0.5em solid var(--mainBorderColor);
+    border-image-source: radial-gradient(to left, #743ad5, #d53a9d);
+    width: 70%;
+    height: 60vh;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    background-color: var(--consoleBrightSurface);
+    font-family: 'Righteous', cursive;
+}
+
+.letterButton {
+    border: 0.35em solid var(--mainBorderColor);
+    border-radius: 1em;
+    min-width: 3em;
+    min-height: 1.2em;
+    background-color: var(--innerButton);
+    margin: 0.1em;
+}
+
+.hide-me {
+    display: none !important;
+}
+
+/* RETRO STYLE FINAL PAGE */
+
+#finalScreen{
+    border: 0.5em solid var(--mainBorderColor);
+    border-image-source: radial-gradient(to left, #743ad5, #d53a9d);
+    width: 70%;
+    height: 60vh;
+    margin: 0 auto;
+    background-color: var(--consoleBrightSurface);
+    font-family: 'Righteous', cursive;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+
+#playAgainButton {
+    border: 0.5em solid var(--mainBorderColor);
+    border-radius: 1em;
+    width: 5em;
+    height: 2em;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+}
+
+#endScreen {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+#finalScreen > img{
+    max-width: 5em;
+    position: absolute;
+    top: 3em;
+    left: 2em;
+
+}
+
+.buttonGroup {
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+#finalPage {
+    flex-basis:50%;
+}
+
+
+#winMessage > img{
+    max-width: 7em;
+    max-height: 7em;
+}
+
+#lostMessage > img{
+    max-width: 7em;
+    max-height: 7em;
 }
