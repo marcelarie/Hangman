@@ -4,8 +4,9 @@ hangManLetters.forEach(e => {
         e.classList.add('visibilityHidden')
         for (c in levelWord) {
             if (levelWord[c] === e.textContent) {
-                let newHidden = hidden.replace(hidden[c], levelWord[c])
+                let newHidden = hidden.replaceAt(c, levelWord[c])
                 hidden = newHidden;
+                console.log(newHidden)
                 hangManGuessLetters.textContent = newHidden;
             }
         }
@@ -51,4 +52,16 @@ function runTheGame() {
     hiddenCharacters();
 }
 
+String.prototype.replaceAt = function (index, replacement) {
+    if (index >= this.length) {
+        return this.valueOf();
+    }
+    var chars = this.split('');
+    chars[index] = '';
+    chars[index] = replacement;
+    if (chars.length > levelWord.length) {
+        chars.pop();
+    }
+    return chars.join('');
+}
 
