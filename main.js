@@ -1,5 +1,6 @@
 document.getElementById("secondMainPage").classList.add("hide-me");
 document.getElementById("finalPage").classList.add("hide-me");
+document.getElementById("scores").classList.add("hide-me");
 
 function prevent(event) {
     event.preventDefault();
