@@ -8,10 +8,11 @@ var score;
 
 function prevent(event) {
     event.preventDefault();
-    start=Date.now();
+    start = Date.now();
     var name = document.getElementById("userName").value;
     document.getElementById("welcome").classList.add("hide-me");
     document.getElementById("secondMainPage").classList.remove("hide-me");
 }
 
 document.getElementById("startButton").addEventListener("click", prevent);
+document.getElementById("startButton").addEventListener("click", runTheGame);

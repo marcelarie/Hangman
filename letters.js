@@ -46,5 +46,9 @@ function hiddenCharacters() {
     hangManGuessLetters.textContent = hidden;
 }
 
+function runTheGame() {
+    showTheWord();
+    hiddenCharacters();
+}
 
 
