@@ -7,7 +7,8 @@ canvas.width = 800;
 let count = 0;
 
 function fail() {
-    if (correct === true) {
+    if (correct === false) {
+        correct = true;
         count++;
     }
     switch (count) {
