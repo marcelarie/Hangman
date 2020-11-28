@@ -2,7 +2,7 @@ const canvas = document.querySelector('#canvasBox');
 const ctx = canvas.getContext('2d');
 
 canvas.height = 350;
-canvas.width = 370;
+canvas.width = 350;
 
 let count = 0;
 
