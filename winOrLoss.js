@@ -13,22 +13,27 @@ function incrementLetterCount(event) {
 
 function winOrLoss() {
     if (reference === userWord) {
-        document.getElementById("secondMainPage").classList.add("hide-me");
-        document.getElementById("scores").classList.remove("hide-me");
-        document.getElementById("finalPage").classList.remove("hide-me");
         var win = true;
         level += 1;
-        end=Date.now();
-        score=(end-start)/1000;
+        scoreRank()
     }
     else if (letterCount === 10) {
-        document.getElementById("secondMainPage").classList.add("hide-me");
-        document.getElementById("scores").classList.remove("hide-me");
-        document.getElementById("finalPage").classList.remove("hide-me");
-        win = false;
-        end=Date.now();
-        score=(end-start)/1000;
+        var win = true;
+        scoreRank()
     }
+}
+
+function scoreRank() {
+    document.getElementById("secondMainPage").classList.add("hide-me");
+    document.getElementById("scores").classList.remove("hide-me");
+    document.getElementById("finalPage").classList.remove("hide-me");
+    end=Date.now();
+    score=(end-start)/1000;
+
+    var parent=document.getElementById("scores");
+    var newUser=document.createElement("span");
+    newUser.innerHTML=name+" : "+score;
+    parent.appendChild(newUser);
 }
 
 document.getElementById("hangManLetters").addEventListener("click", incrementLetterCount);

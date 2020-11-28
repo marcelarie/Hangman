@@ -5,11 +5,12 @@ document.getElementById("scores").classList.add("hide-me");
 var start;
 var end;
 var score;
+var name="noName";
 
 function prevent(event) {
     event.preventDefault();
     start=Date.now();
-    var name = document.getElementById("userName").value;
+    name = document.getElementById("userName").value;
     document.getElementById("welcome").classList.add("hide-me");
     document.getElementById("secondMainPage").classList.remove("hide-me");
 }
