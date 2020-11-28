@@ -1,6 +1,7 @@
 const hangManLetters = document.querySelectorAll('.letterButton');
 hangManLetters.forEach(e => {
     e.addEventListener('click', () => {
+        currentWord=hangManGuessLetters.textContent;
         e.classList.add('visibilityHidden')
         for (c in levelWord) {
             if (levelWord[c] === e.textContent) {

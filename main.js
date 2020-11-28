@@ -20,6 +20,7 @@ function playAgain(){
     hangManLetters.forEach(e => {
         e.classList.remove('visibilityHidden');
     })
+    levelWord='';
 }
 
 document.getElementById("startButton").addEventListener("click", runTheGame);
