@@ -28,14 +28,14 @@ function winOrLoss() {
 }
 
 function scoreRank(win) {
-    if (win) {
+    if(win){
+        document.getElementById("secondsMessage").innerHTML=score;
         document.getElementById("lostMessage").classList.add("hide-me");
         document.getElementById("winMessage").classList.remove("hide-me");
     }
     else {
         document.getElementById("winMessage").classList.add("hide-me");
         document.getElementById("lostMessage").classList.remove("hide-me");
-
     }
     document.getElementById("secondMainPage").classList.add("hide-me");
     document.getElementById("finalScreen").classList.remove("hide-me");
