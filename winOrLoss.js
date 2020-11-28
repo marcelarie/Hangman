@@ -15,15 +15,24 @@ function winOrLoss() {
     if (reference === userWord) {
         var win = true;
         level += 1;
-        scoreRank()
+        scoreRank(win)
     }
     else if (letterCount === 10) {
-        var win = true;
-        scoreRank()
+        var win = false;
+        scoreRank(win)
     }
 }
 
-function scoreRank() {
+function scoreRank(win) {
+    if(win){
+        document.getElementById("lostMessage").classList.add("hide-me");
+        document.getElementById("winMessage").classList.remove("hide-me");
+    }
+    else{
+        document.getElementById("winMessage").classList.add("hide-me");
+        document.getElementById("lostMessage").classList.remove("hide-me");
+        
+    }
     document.getElementById("secondMainPage").classList.add("hide-me");
     document.getElementById("finalScreen").classList.remove("hide-me");
     end=Date.now();
