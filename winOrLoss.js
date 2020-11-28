@@ -7,9 +7,13 @@ var reference='';
 var userWord='';
 
 
-function incrementLetterCount(){
+function incrementLetterCount(event){
+    console.log("entro");
     letterCount+=1;
     winOrLoss();
+    let letter=event.target;
+    letter.innertext;
+    
 }
 
 function winOrLoss(){

@@ -8,7 +8,6 @@ let startNewGame = function () {
 let resetCurrentWord = function () {
     /*We select the div where the chosen word would be stored*/
     let word = document.getElementById("hangManGuessLetters");
-  
     while (word.firstChild) {
       word.removeChild(word.firstChild);
     }
@@ -23,7 +22,6 @@ let insertChosenWord = function (word) {
     hangManGuessLetters.array.forEach(function (letter){
         let spanLetter = document.createElement("span");
         let content = document.createTextNode(letter);
-
         spanLetter.appendChild(content);
         hangManGuessLettersDom.appendChild(spanLetter);
     });
@@ -48,11 +46,8 @@ let insertClickedLetter = function (e) {
 };*/
 
 /* Creating EventListener for each key*/
-
-}; 
-document.getElementById("letterA").addEventListener("click", myFunction(){
-
-})
+/* }; */
+/* document.getElementById("letterA").addEventListener("click", myFunction(){}) */
 
 
 

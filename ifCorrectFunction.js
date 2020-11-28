@@ -17,7 +17,7 @@ this.enigmaWord = catchWord();
 /* Make the enigmaWord equal to the one catched from random selection*/
 
 
-theHangedMan.prototype.pickLetter = function (letter) {
+theHangedMan.prototype.pickLetter = function (letter) {/* AQUI DEBE LLEGAR LA LETRA */
     /* Use capital letter to compare strings with the actual inserted letter*/
     letter = letter.toUpperCase();
 
@@ -47,7 +47,6 @@ theHangedMan.prototype.showHowIam = function () {
             wordStatus.push(letter);
         } else {
             wordStatus.push("_");
-
         }
     });
     return wordStatus;
@@ -71,7 +70,3 @@ theHangedMan.prototype.didIWin = function() {
         return "You Lost, GameOver!!!!";
     }
 };
-
-
-
-
