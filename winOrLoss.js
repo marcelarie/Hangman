@@ -28,29 +28,31 @@ function winOrLoss() {
 }
 
 function scoreRank(win) {
-    if(win){
-        document.getElementById("secondsMessage").innerHTML=score;
-        document.getElementById("lostMessage").classList.add("hide-me");
-        document.getElementById("winMessage").classList.remove("hide-me");
-    }
-    else {
-        document.getElementById("winMessage").classList.add("hide-me");
-        document.getElementById("lostMessage").classList.remove("hide-me");
-        var wordwhenlose = document.createElement("span");
-        wordwhenlose.innerHTML="The word was "+levelWord;
-        document.getElementById("finalScreen").appendChild(wordwhenlose);
-    }
     document.getElementById("secondMainPage").classList.add("hide-me");
     document.getElementById("finalScreen").classList.remove("hide-me");
     end = Date.now();
     score = (end - start) / 1000;
 
-
-
     var parent = document.getElementById("scores");
     var newUser = document.createElement("span");
     newUser.innerHTML = name + " : " + score;
     parent.appendChild(newUser);
+
+    if(win){
+        document.getElementById("secondsMessage").innerHTML=score;
+        document.getElementById("lostMessage").classList.add("hide-me");
+        document.getElementById("winMessage").classList.remove("hide-me");
+        document.getElementById("timeMessage").classList.remove("hide-me");
+    }
+    else {
+        document.getElementById("timeMessage").classList.add("hide-me");
+        document.getElementById("winMessage").classList.add("hide-me");
+        document.getElementById("lostMessage").classList.remove("hide-me");
+        var wordwhenlose = document.createElement("span");
+        wordwhenlose.innerHTML="The word was "+levelWord;
+        wordwhenlose.classList.add("removeMe");
+        document.getElementById("placeHere").appendChild(wordwhenlose);
+    }
 }
 
 document.getElementById("hangManLetters").addEventListener("click", incrementLetterCount);

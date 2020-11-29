@@ -14,6 +14,9 @@ function prevent(event) {
 }
 
 function playAgain() {
+    if (document.getElementsByClassName("removeMe")[0]!=undefined){
+        document.getElementsByClassName("removeMe")[0].remove();
+    }
     document.getElementById("finalScreen").classList.add("hide-me");
     document.getElementById("welcome").classList.remove("hide-me");
 
