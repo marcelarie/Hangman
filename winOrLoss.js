@@ -36,11 +36,16 @@ function scoreRank(win) {
     else {
         document.getElementById("winMessage").classList.add("hide-me");
         document.getElementById("lostMessage").classList.remove("hide-me");
+        var wordwhenlose = document.createElement("span");
+        wordwhenlose.innerHTML="The word was "+levelWord;
+        document.getElementById("finalScreen").appendChild(wordwhenlose);
     }
     document.getElementById("secondMainPage").classList.add("hide-me");
     document.getElementById("finalScreen").classList.remove("hide-me");
     end = Date.now();
     score = (end - start) / 1000;
+
+
 
     var parent = document.getElementById("scores");
     var newUser = document.createElement("span");
